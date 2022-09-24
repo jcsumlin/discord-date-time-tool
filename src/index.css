@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.MuiInputBase-input {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.stickerIcon-3Jx5SE {
+    width: 20px!important;
+    height: 20px!important;
+}
+.icon-1d5zch {
+    width: 24px;
+    height: 24px;
+}
+
+.sprite {
+    background-position: 50%;
+}
+
+.discord-message {
+    background: rgba(106,116,128, 0.24);
 }
