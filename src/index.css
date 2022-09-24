@@ -26,3 +26,9 @@
 .MuiButton-contained {
     background-color: #5865F2 !important;
 }
+
+.github-corner > svg {
+    fill: #70B7FD;
+    left: 0;
+    transform: scale(-1, 1);
+}
