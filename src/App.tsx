@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Button,
   FormControl,
   InputAdornment,
   InputLabel,
@@ -14,6 +15,7 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import moment from 'moment';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { toast, ToastContainer } from 'react-toastify';
 import GifButton from './Components/GifButton';
 import StickerButton from './Components/StickerButton';
 import EmojiButton from './Components/EmojiButton';
@@ -103,7 +105,7 @@ function App() {
             dateTime={dateTime}
           />
         </div>
-        <div className="flex mt-5">
+        <div className="flex mt-5 mb-5">
           <TextField
             variant="standard"
             InputProps={{
@@ -126,8 +128,18 @@ function App() {
             className="bg-[#eaedef] !rounded-lg"
           />
         </div>
-
+        <Button
+          variant="contained"
+          fullWidth
+          onClick={() => {
+            navigator.clipboard.writeText(`<t:${dateTime ? dateTime.unix() : null}:${format.unix}>`)
+              .then(() => toast.success('Copied!'));
+          }}
+        >
+          Copy To Clipboard
+        </Button>
       </Paper>
+      <ToastContainer />
     </div>
   );
 }

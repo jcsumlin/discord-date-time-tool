@@ -23,3 +23,6 @@
 .discord-message {
     background: rgba(106,116,128, 0.24);
 }
+.MuiButton-contained {
+    background-color: #5865F2 !important;
+}
